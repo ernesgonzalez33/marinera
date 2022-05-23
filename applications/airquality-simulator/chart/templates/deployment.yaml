@@ -106,7 +106,7 @@ spec:
           configMap:
             name: {{ include "airquality-simulator.fullname" . }}-keycloak-cm
         {{- end -}}
-        {{- if .Values.init.keysubscriptioncloak.enabled }}
+        {{- if .Values.init.subscription.enabled }}
         - name: subscription-init-script
           configMap:
             name: {{ include "airquality-simulator.fullname" . }}-sub-cm
