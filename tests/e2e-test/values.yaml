@@ -21,7 +21,7 @@ keycloak:
   realm: fiware-server
 
 aqApp:
-  enabled: true
+  enabled: false
 
 init: 
   ## configuration for the keycloak init-container
