@@ -38,8 +38,7 @@ spec:
       command: ['mvn', 'test']
       args: ['JAVA_OPTS=-DexcludedGroups="aqapp"']
       {{- else }}
-      command: ['mvn', 'test']
-      args: ['JAVA_OPTS=-DexcludedGroups="aqapp,secured"']
+      command: ['JAVA_OPTS=-DexcludedGroups="aqapp,secured"', 'mvn', 'test']
       {{- end }}
       env:
       - name: REMOTE_DRIVER_URL
