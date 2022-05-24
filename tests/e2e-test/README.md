@@ -19,8 +19,8 @@ $ helm install my-release .
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| image | string | `quay.io/fiware/marinera-e2e:0.0.1` | Marinera e2e image to deploy |
-| imagePullPolicy | string | `IfNotPresent` | Image pull policy for the pod |
+| image | string | `quay.io/fiware/marinera-e2e:0.2.1` | Marinera e2e image to deploy |
+| imagePullPolicy | string | `Always` | Image pull policy for the pod |
 | remoteDriverUrl | string | `http://selenium-hub:4444` | Remote Driver URL for the test |
 | grafanaUrl | string | `https://grafana-demo.apps.fiware-spain.emea-1.rht-labs.com` | Grafana URL for the test |
 | brokerUrl | string | `http://orion-ld:1026` | Broker URL for the test |
