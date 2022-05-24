@@ -11,7 +11,7 @@ data:
       "displayNameHtml": "<div class=\"kc-logo-text\"><span>Keycloak</span></div>",
       "enabled": true,
       "attributes": {
-        "frontendUrl": "http://keycloak:80",
+        "frontendUrl": "http://keycloak:80"
       },
       "sslRequired": "none",
       "roles": {
@@ -97,6 +97,29 @@ data:
           }
         },
         {
+          "name": "e2e-test",
+          "path": "/e2e-test",
+          "realmRoles": [
+            "user"
+          ],
+          "attributes": {
+            "fiware-service": [
+              ""
+            ],
+            "fiware-servicepath": [
+              "/"
+            ]
+          },
+          "clientRoles": {
+            "orion-pep": [
+              "admin",
+              "producer",
+              "subscriptor",
+              "consumer"
+            ]
+          }
+        },
+        {
           "name": "grafana-editor",
           "path": "/grafana-editor",
           "clientRoles": {
@@ -150,6 +173,50 @@ data:
             {
               "name": "test-test-producer",
               "path": "/test-test/test-test-producer",
+              "clientRoles": {
+                "orion-pep": [
+                  "producer"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "airquality-data",
+          "path": "/airquality-data",
+          "attributes": {
+            "fiware-service": [
+              "AirQuality"
+            ],
+            "fiware-servicepath": [
+              "/data"
+            ]
+          },
+          "realmRoles": [
+            "user"
+          ],
+          "subGroups": [
+            {
+              "name": "airquality-data-subscriptor",
+              "path": "/airquality-data/airquality-data-subscriptor",
+              "clientRoles": {
+                "orion-pep": [
+                  "subscriptor"
+                ]
+              }
+            },
+            {
+              "name": "airquality-data-consumer",
+              "path": "/airquality-data/airquality-data-consumer",
+              "clientRoles": {
+                "orion-pep": [
+                  "consumer"
+                ]
+              }
+            },
+            {
+              "name": "airquality-data-producer",
+              "path": "/airquality-data/airquality-data-producer",
               "clientRoles": {
                 "orion-pep": [
                   "producer"
@@ -241,6 +308,25 @@ data:
           },
           "groups": [
             "/test-test/test-test-subscriptor"
+          ]
+        },
+        {
+          "username": "airquality-producer",
+          "enabled": true,
+          "credentials": [
+            {
+              "type": "password",
+              "value": "airquality-producer"
+            }
+          ],
+          "clientRoles": {
+            "account": [
+              "view-profile",
+              "manage-account"
+            ]
+          },
+          "groups": [
+            "/airquality-data/airquality-data-producer"
           ]
         }
       ],
