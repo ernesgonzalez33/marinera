@@ -3,7 +3,7 @@ name: marinera-e2e
 description: A Helm chart for Kubernetes to deploy the Marinera E2E test.
 type: application
 version: 0.1.0
-appVersion: "0.2.0-PRE-6"
+appVersion: "0.2.0"
 keywords:
   - marinera
   - e2e
