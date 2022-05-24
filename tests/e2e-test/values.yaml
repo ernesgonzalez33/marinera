@@ -12,7 +12,7 @@ fiwareService: ""
 fiwareServicePath: "/"
 pepUrl: http://keycloak-pep:8080
 keycloak:
-  enabled: false
+  enabled: true
   url: http://keycloak
   username: e2e-test-user
   password: e2e-test-user
