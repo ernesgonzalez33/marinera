@@ -1,7 +1,7 @@
-source: https://github.com/FIWARE-Ops/marinera
-release: demo
-destination_namespace: &destination demo
-branch: &branch main
+source: https://github.com/ernesgonzalez33/marinera
+release: marinera
+destination_namespace: &destination marinera
+branch: &branch v1
 secretsEnabled: &secretsEnabled false
 
 applications:
