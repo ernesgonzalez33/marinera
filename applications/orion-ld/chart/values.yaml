@@ -1,5 +1,7 @@
 orion-ld:
   broker:
+    metrics:
+      enabled: "true"
     # Avoid inconsistencies when running more than 1 replica.
     subCacheIval: 1
     db:
